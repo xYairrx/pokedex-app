@@ -1,4 +1,4 @@
-import { pokemonTypeColor } from "@/constants/PokemonColorByType";
+import { pokemonTypeColor } from "@/constants/PokemonTypeByColor";
 import { Pokemon } from "@/infraestructure/interfaces/pokemon.interface";
 
 export const getBackgroundColor = (pokemon: Pokemon | undefined) => {
