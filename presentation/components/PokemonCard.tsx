@@ -33,7 +33,7 @@ const PokemonCard = ({ pokemon }: PokemonCardProps) => {
 
       <Image
         source={pokeball}
-        className="opacity-10 absolute right-0 bottom-0 w-32 h-32 grayscale z-10 "
+        className="opacity-10 absolute -right-2 -bottom-2 w-32 h-32  z-10 "
       />
     </Pressable>
   );

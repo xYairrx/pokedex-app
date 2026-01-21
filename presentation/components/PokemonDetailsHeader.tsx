@@ -6,32 +6,32 @@ import PokemonType from "./PokemonType";
 const pokeball = require("../../assets/images/pokeball.jpg");
 
 interface PokemonDetailsHeaderProps {
-    pokemon: Pokemon;
+  pokemon: Pokemon;
 }
 
 const PokemonDetailsHeader = ({ pokemon }: PokemonDetailsHeaderProps) => {
-    return (
-        <View className="items-center gap-6 ">
-            <Text className="text-4xl font-extrabold capitalize text-white">
-                {pokemon?.name}
-            </Text>
-            <View className="flex-row gap-4">
-                <PokemonType slot={pokemon?.types ?? []} type="row" />
-                <Text className="text-2xl text-white font-black">#{pokemon?.id}</Text>
-            </View>
-            <Image
-                className="w-72 h-72 z-30 -bottom-10"
-                source={{
-                    uri: pokemon?.sprite,
-                }}
-            />
+  return (
+    <View className="items-center gap-4">
+      <Text className="text-4xl font-extrabold capitalize text-white">
+        {pokemon?.name}
+      </Text>
+      <View className="flex-row gap-4">
+        <PokemonType slot={pokemon?.types ?? []} type="row" />
+        <Text className="text-xl text-white font-black">#{pokemon?.id}</Text>
+      </View>
+      <Image
+        className="w-48 h-48 z-30 -bottom-4"
+        source={{
+          uri: pokemon?.sprite,
+        }}
+      />
 
-            <Image
-                source={pokeball}
-                className="opacity-10 absolute -bottom-12 z-10"
-            />
-        </View>
-    );
+      <Image
+        source={pokeball}
+        className="opacity-10 absolute -bottom-10 z-10 w-60 h-60"
+      />
+    </View>
+  );
 };
 
 export default PokemonDetailsHeader;
